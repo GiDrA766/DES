@@ -1,4 +1,12 @@
-from DES_cipher import xor
+
+from DES_cipher import  cipher, print_hex
+
+
 if __name__ == '__main__':
-    print(int("11", base = 2))
-    example = '10110010100110010110100110100101'
+    plaintext = "123456ABCD132536"
+    Key = "AABB09182736CCDD"
+    bin_str = bin(int(plaintext, 16))[2:].zfill(64)
+    cipher_text = cipher(bin_str, Key)
+    print_hex(cipher_text)
+
+

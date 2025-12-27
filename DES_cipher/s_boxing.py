@@ -12,13 +12,12 @@ def wither(six_blocks):
 
 def s_box(block, index):
     out = []
-    row = '' + block[-1] + block[0]
-    print(row)
+    row = ''+ block[0] + block[-1]
     col = ''.join(block[1:5])
     row = int(row, base=2)
     col = int(col, base=2)
     num = S[index][row][col]
-    result = str(bin(num))[2:]
+    result = str(bin(num))[2:].zfill(4)
     return result
 
 def substitute(T1):

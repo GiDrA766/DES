@@ -1,3 +1,8 @@
-from .expansion import  expand
-from .xor import  xor
-from .s_boxing import  substitute, s_box
+from .round import des_round
+from .cipher import cipher
+
+
+
+
+def print_hex(string):
+    print(hex(int(string, 2))[2:])

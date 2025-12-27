@@ -8,6 +8,5 @@ def expand(block: str) -> str:
             break
         else:
             blocks.append(block[i-1:i+5])
-    print(blocks)
     return ''.join(blocks)
 
